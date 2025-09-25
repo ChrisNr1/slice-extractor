@@ -25,7 +25,7 @@ You can simply download a precompiled `.so` file from here:
 | [tiffsampler.so](https://hmgubox2.helmholtz-muenchen.de/index.php/s/edL572kZD3fEd9W) | x64          | Linux  |
 
 
-Or you can compile it by yourself by downloading the [grok image codec suite](https://github.com/GrokImageCompression/grok) which thankfully already sets up all libraries this project uses with its cmake. The, use the `gcc` compiler with these flags:
+Or you can compile it by yourself by downloading the [grok image codec suite](https://github.com/GrokImageCompression/grok) which thankfully already sets up all libraries this project uses with its cmake. Then, use the `gcc` compiler with these flags:
 ```
 gcc -shared -ltiff -ljpeg -lm -lgrokj2k -mavx512f -mavx512bw -mavx512vl tiff_sampler.c -o tiff_sampler.so -fPIC -O3
 ```

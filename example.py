@@ -49,5 +49,6 @@ img = TF.resize(img, (args.tile_size, args.tile_size)) # Copies the image and ge
 
 lib.free_tile(tile_ptr) # free the C memory in which the original tile was stored
 
-plt.imshow(img)
+# Continue with the copy
+plt.imshow(torch.moveaxis(img, 0, -1))
 plt.show()
